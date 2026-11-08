@@ -3,27 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Review komik Hai, Miiko! dari volume awal sampai terbaru, plus pembahasan karakter dan penokohan.">
-  <title>About | Ruang Baca Miiko</title>
+  <meta name="description" content="Review komik Hai, Miiko! dari volume awal sampai terbaru, dengan pembahasan karakter dan penokohan.">
+  <title>About | All About Hai, Miiko!</title>
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<!-- ==================== HEADER SECTION ==================== -->
 <header class="header">
-  <span class="bintang b1">&#9733;</span><span class="bintang b2">&#10084;</span>
-  <span class="bintang b3">&#9733;</span><span class="bintang b4">&#10047;</span>
+  <span class="bintang b1">&#9733;</span>
+  <span class="bintang b2">&#10084;</span>
+  <span class="bintang b3">&#9733;</span>
+  <span class="bintang b4">&#10047;</span>
   <div class="wadah">
-    <img class="logo" src="favicon.svg" alt="Logo Ruang Baca Miiko" width="84" height="84">
+    <img class="logo" src="favicon.svg" alt="Logo All About Hai, Miiko!" width="84" height="84">
     <div>
-      <h1>Ruang Baca Miiko</h1>
+      <h1>All About Hai, Miiko!</h1>
       <p>Review &amp; catatan seorang pembaca setia komik Hai, Miiko! &#9825;</p>
     </div>
   </div>
 </header>
 
-<div class="berjalan"><span>&#9733; Selamat datang di Ruang Baca Miiko! &#9733; Review volume demi volume dari awal sampai terbaru &#9733; Bahas karakter dan penokohan favorit &#9733; Yuk baca dan diskusi lewat halaman Contact &#9733;</span></div>
+<!-- ==================== RUNNING TEXT / BERJALAN ==================== -->
+<div class="berjalan">
+  <span>&#9733; 
+    Selamat datang di All About Hai, Miiko! &#9733; 
+    Review volume demi volume dari awal sampai terbaru &#9733; 
+    Bahas karakter dan penokohan favorit &#9733; 
+    Yuk baca dan diskusi lewat halaman Contact &#9733;
+  </span>
+</div>
 
+<!-- ==================== NAVIGATION BAR ==================== -->
 <nav class="nav">
   <div class="wadah">
     <button class="tombol-menu" id="tombolMenu" aria-label="Buka menu">&#9776;</button>
@@ -31,7 +43,7 @@
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html" class="aktif">About</a>
         <ul class="sub">
-          <li><a href="about.html#komik">Tentang Komiknya</a></li>
+          <li><a href="about.html#komik">Tentang Komik</a></li>
           <li><a href="about.html#sejarah">Sejarah Komik</a></li>
           <li><a href="about.html#visimisi">Visi, Misi &amp; Tujuan</a></li>
           <li><a href="about.html#penulis">Tentang Penulis</a></li>
@@ -46,12 +58,18 @@
   </div>
 </nav>
 
+<!-- ==================== MAIN LAYOUT CONTAINER ==================== -->
 <div class="wadah tata">
+    
+  <!-- MAIN CONTENT AREA -->
   <main>
+    <!-- Tentang Komik Section -->
     <section class="kartu" id="komik">
-      <h2>Tentang Komiknya</h2>
+      <h2>Tentang Komik</h2>
       <p><i>Hai, Miiko!</i> (judul Jepang: <i>Kocchi Muite! Miiko</i>) adalah komik shoujo karya Eriko Ono tentang Miiko Yamada, anak SD yang ceria, dan lingkungan di sekitarnya. Komik ini terbit di majalah Ciao milik Shogakukan.</p>
     </section>
+
+    <!-- Sejarah Komik Section -->
     <section class="kartu" id="sejarah">
       <h2>Sejarah Komik</h2>
       <ul style="margin-left:22px">
@@ -64,6 +82,8 @@
       </ul>
       <p style="margin-top:8px;font-size:.85rem">Sumber: <a href="https://en.wikipedia.org/wiki/Kocchi_Muite!_Miiko">Wikipedia</a> dan <a href="https://www.gramedia.com/best-seller/sinopsis-komik-hai-miiko">Gramedia</a>.</p>
     </section>
+
+    <!-- Visi, Misi & Tujuan Section -->
     <section class="kartu" id="visimisi">
       <h2>Visi, Misi &amp; Tujuan</h2>
       <h3>Visi</h3>
@@ -77,54 +97,66 @@
       <h3 style="margin-top:10px">Tujuan</h3>
       <p>Mengajak lebih banyak orang menikmati komik ini dan melihat sisi-sisi ceritanya yang sering terlewat.</p>
     </section>
+
+    <!-- Tentang Penulis Section -->
     <section class="kartu" id="penulis">
       <h2>Tentang Penulis</h2>
       <table>
-        <tr><td>Nama</td><td>[isi namamu]</td></tr>
+        <tr><td>Nama</td><td>Echa Junika Alawiyah</td></tr>
         <tr><td>Peran</td><td>Pembaca &amp; penulis review</td></tr>
-        <tr><td>Membaca sejak</td><td>[isi tahun]</td></tr>
-        <tr><td>Karakter favorit</td><td>[isi karakter favoritmu]</td></tr>
-        <tr><td>Volume favorit</td><td>[isi volume favoritmu]</td></tr>
+        <tr><td>Membaca sejak</td><td>2012</td></tr>
+        <tr><td>Karakter favorit</td><td>Miiko</td></tr>
+        <tr><td>Volume favorit</td><td>Volume 36</td></tr>
       </table>
     </section>
   </main>
 
-  <aside class="sidebar">
-    <div class="kartu">
-      <h3>&#9200; Jam</h3>
-      <div id="jam">--:--:--</div>
-      <div id="tanggal"></div>
-    </div>
-    <div class="kartu">
-      <h3>&#128214; Info Komik</h3>
-      <table class="info-komik">
-        <tr><td>Judul Jepang</td><td>Kocchi Muite! Miiko</td></tr>
-        <tr><td>Judul Indonesia</td><td>Hai, Miiko!</td></tr>
-        <tr><td>Pengarang</td><td>Eriko Ono</td></tr>
-        <tr><td>Penerbit Jepang</td><td>Shogakukan (majalah Ciao)</td></tr>
-        <tr><td>Anime</td><td>42 episode (1998&ndash;1999)</td></tr>
-      </table>
-    </div>
-    <div class="kartu">
-      <h3>&#128240; Artikel Terbaru</h3>
-      <ul>
-        <li><a href="artikel-1.html">Mengenal Hai, Miiko!</a></li>
-        <li><a href="artikel-2.html">Penokohan Miiko Yamada</a></li>
-        <li><a href="artikel-3.html">Miiko dan Tappei</a></li>
-      </ul>
-    </div>
-    <div class="kartu">
-      <h3>&#128101; Pengunjung</h3>
-      <div class="statistik" id="pengunjung">0</div>
-      <p style="text-align:center;font-size:.8rem">kunjungan dari browser ini</p>
-    </div>
-  </aside>
+<!-- SIDEBAR AREA -->
+<aside class="sidebar">
+  <!-- Widget Jam & Tanggal -->
+  <div class="kartu">
+    <h3>&#9200; Jam</h3>
+    <div id="jam">--:--:--</div>
+    <div id="tanggal"></div>
+  </div>
+
+  <!-- Widget Info Komik -->
+  <div class="kartu">
+    <h3>&#128214; Info Komik</h3>
+    <table class="info-komik">
+      <tr><td>Judul Jepang</td><td>Kocchi Muite! Miiko</td></tr>
+      <tr><td>Judul Indonesia</td><td>Hai, Miiko!</td></tr>
+      <tr><td>Pengarang</td><td>Eriko Ono</td></tr>
+      <tr><td>Penerbit Jepang</td><td>Shogakukan (majalah Ciao)</td></tr>
+      <tr><td>Anime</td><td>42 episode (1998&ndash;1999)</td></tr>
+    </table>
+  </div>
+
+  <!-- Widget Artikel Terbaru -->
+  <div class="kartu">
+    <h3>&#128240; Artikel Terbaru</h3>
+    <ul>
+      <li><a href="artikel-1.html">Mengenal Hai, Miiko!</a></li>
+      <li><a href="artikel-2.html">Penokohan Miiko Yamada</a></li>
+      <li><a href="artikel-3.html">Team Tappei atau Team Yoshida?</a></li>
+    </ul>
+  </div>
+
+  <!-- Widget Statistik Pengunjung -->
+  <div class="kartu">
+    <h3>&#128101; Pengunjung</h3>
+    <div class="statistik" id="pengunjung">0</div>
+    <p style="text-align:center;font-size:.8rem">kunjungan dari browser ini</p>
+  </div>
+</aside>
+
 </div>
 
+<!-- ==================== FOOTER SECTION ==================== -->
 <footer class="footer">
   <div class="wadah">
-    <p>&copy; 2026 Ruang Baca Miiko. Situs review penggemar, tidak berafiliasi dengan pengarang atau penerbit. Hai, Miiko! adalah karya Eriko Ono.</p>
-    <p>Desain oleh [isi namamu] &middot; Website: <a href="https://github.com/namamu/miiko-fandom">github.com/namamu/miiko-fandom</a></p>
+    <p>&copy; 2026 All About Hai, Miiko!. Situs review penggemar, tidak berafiliasi dengan pengarang atau penerbit. Hai, Miiko! adalah karya Eriko Ono.</p>
+    <p>Desain oleh Echa Junika &middot; Website: <a href="https://github.com/namamu/miiko-fandom">github.com/namamu/miiko-fandom</a></p>
   </div>
 </footer>
 
