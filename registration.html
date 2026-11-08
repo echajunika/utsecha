@@ -3,35 +3,47 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Review komik Hai, Miiko! dari volume awal sampai terbaru, plus pembahasan karakter dan penokohan.">
-  <title>Registration | Ruang Baca Miiko</title>
+  <meta name="description" content="Pendaftaran Klub Pembaca Setia dan Warga Kehormatan Dunia Miiko di All About Hai, Miiko!">
+  <title>Registration | All About Hai, Miiko!</title>
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<!-- ==================== HEADER SECTION ==================== -->
 <header class="header">
-  <span class="bintang b1">&#9733;</span><span class="bintang b2">&#10084;</span>
-  <span class="bintang b3">&#9733;</span><span class="bintang b4">&#10047;</span>
+  <span class="bintang b1">&#9733;</span>
+  <span class="bintang b2">&#10084;</span>
+  <span class="bintang b3">&#9733;</span>
+  <span class="bintang b4">&#10047;</span>
   <div class="wadah">
-    <img class="logo" src="favicon.svg" alt="Logo Ruang Baca Miiko" width="84" height="84">
+    <img class="logo" src="favicon.svg" alt="Logo All About Hai, Miiko!" width="84" height="84">
     <div>
-      <h1>Ruang Baca Miiko</h1>
+      <h1>All About Hai, Miiko!</h1>
       <p>Review &amp; catatan seorang pembaca setia komik Hai, Miiko! &#9825;</p>
     </div>
   </div>
 </header>
 
-<div class="berjalan"><span>&#9733; Selamat datang di Ruang Baca Miiko! &#9733; Review volume demi volume dari awal sampai terbaru &#9733; Bahas karakter dan penokohan favorit &#9733; Yuk baca dan diskusi lewat halaman Contact &#9733;</span></div>
+<!-- ==================== RUNNING TEXT / BERJALAN ==================== -->
+<div class="berjalan">
+  <span>&#9733; 
+    Selamat datang di All About Hai, Miiko! &#9733; 
+    Review volume demi volume dari awal sampai terbaru &#9733; 
+    Bahas karakter dan penokohan favorit &#9733; 
+    Yuk baca dan diskusi lewat halaman Contact &#9733;
+  </span>
+</div>
 
+<!-- ==================== NAVIGATION BAR ==================== -->
 <nav class="nav">
   <div class="wadah">
     <button class="tombol-menu" id="tombolMenu" aria-label="Buka menu">&#9776;</button>
     <ul id="menuUtama">
       <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a>
+      <li><a href="about.html" class="aktif">About</a>
         <ul class="sub">
-          <li><a href="about.html#komik">Tentang Komiknya</a></li>
+          <li><a href="about.html#komik">Tentang Komik</a></li>
           <li><a href="about.html#sejarah">Sejarah Komik</a></li>
           <li><a href="about.html#visimisi">Visi, Misi &amp; Tujuan</a></li>
           <li><a href="about.html#penulis">Tentang Penulis</a></li>
@@ -40,75 +52,111 @@
       <li><a href="review.html">Review</a></li>
       <li><a href="karakter.html">Karakter</a></li>
       <li><a href="gallery.html">Gallery</a></li>
-      <li><a href="registration.html" class="aktif">Registration</a></li>
+      <li><a href="registration.html">Registration</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
   </div>
 </nav>
 
+<!-- ==================== MAIN LAYOUT CONTAINER ==================== -->
 <div class="wadah tata">
+    
+  <!-- MAIN CONTENT AREA -->
   <main>
+    <!-- Formulir Pendaftaran Klub Penggemar -->
     <section class="kartu">
-      <h2>Daftar Pembaca Setia</h2>
-      <p>Isi formulir ini untuk jadi pembaca terdaftar dan mendapat kabar saat review baru terbit.</p>
+      <h2>&#10084; Pendaftaran Warga Kehormatan Desa Yamada!</h2>
+      <p>Mau jadi bagian dari lingkaran terdekat para pembaca setia Miiko? Yuk, isi formulir di bawah ini untuk resmi bergabung ke <b>Klub Pembaca Setia Hai, Miiko!</b> Dapatkan update kilat setiap kali review volume terbaru rilis, plus pamerkan kubu favoritmu di sini! &#9733;</p><br>
+        
       <form id="formRegistrasi">
-        <label for="nama">Nama lengkap</label>
-        <input type="text" id="nama" required>
-        <label for="panggilan">Nama panggilan</label>
-        <input type="text" id="panggilan" required>
-        <label for="email">Email</label>
-        <input type="email" id="email" required>
-        <label for="volume">Volume terakhir yang kamu baca</label>
-        <input type="number" id="volume" min="1" max="60" required>
-        <label for="karakter">Karakter favorit</label>
-        <select id="karakter">
-          <option>Pilih karakter</option><option>Miiko Yamada</option><option>Tappei Eguchi</option>
-          <option>Mari Shimura</option><option>Yukko Ogawa</option><option>Ikuya Yoshida</option><option>Lainnya</option>
+        <label for="nama">Nama Lengkap (atau Nama Panggilan Fandom)</label>
+        <input type="text" id="nama" placeholder="Contoh: Echa Miiko Lover" required>
+          
+        <label for="panggilan">Panggilan Akrab di Klub</label>
+        <input type="text" id="panggilan" placeholder="Contoh: Echa" required>
+          
+        <label for="email">Alamat Email (untuk kiriman surat cinta &amp; info review)</label>
+        <input type="email" id="email" placeholder="echa.junika@contoh.com" required>
+          
+        <label for="volume">Volume <i>Hai, Miiko!</i> terakhir yang sudah kamu tamatkan</label>
+        <input type="number" id="volume" min="1" max="60" placeholder="Misal: 36" required>
+          
+        <label for="karakter">Karakter Paling Jagoan / Favorit Kamu</label>
+        <select id="karakter" required>
+          <option value="">-- Pilih Karakter Favoritmu --</option>
+          <option>Miiko Yamada (Si Ceria &amp; Heboh)</option>
+          <option>Tappei Eguchi (Si Jahil yang Perhatian)</option>
+          <option>Mari Shimura (Sahabat Setia &amp; Calon Komikus)</option>
+          <option>Yukko Ogawa (Si Manis &amp; Sabar)</option>
+          <option>Ikuya Yoshida (Murid Teladan &amp; Tenang)</option>
+          <option>Mamoru Yamada (Adik Pintar &amp; Rapi)</option>
+          <option>Lainnya (Tulis di alasan ya!)</option>
         </select>
-        <label for="alasan">Apa yang paling kamu suka dari komik ini?</label>
-        <textarea id="alasan" rows="4"></textarea>
-        <button type="submit">Daftar Sekarang</button>
+
+        <label for=" kubu">Pilih Kubu Kamu Sekarang!</label>
+        <select id="kubu">
+          <option value="">-- Team Tappei atau Team Yoshida? --</option>
+          <option>Team Tappei (Suka dinamika usil tapi setia)</option>
+          <option>Team Yoshida (Suka ketenangan &amp; perhatian lembut)</option>
+          <option>Team Netral / Bahagia untuk Siapa Saja!</option>
+        </select>
+          
+        <label for="alasan">Ceritakan dong, apa hal paling berkesan dari komik Hai, Miiko! buat kamu?</label>
+        <textarea id="alasan" rows="4" placeholder="Tuliskan dengan penuh semangat di sini..."></textarea>
+          
+        <button type="submit">&#10084; Daftar Jadi Anggota Resmi!</button>
       </form>
+        
       <div class="pesan" id="pesanRegistrasi"></div>
     </section>
   </main>
 
-  <aside class="sidebar">
-    <div class="kartu">
-      <h3>&#9200; Jam</h3>
-      <div id="jam">--:--:--</div>
-      <div id="tanggal"></div>
-    </div>
-    <div class="kartu">
-      <h3>&#128214; Info Komik</h3>
-      <table class="info-komik">
-        <tr><td>Judul Jepang</td><td>Kocchi Muite! Miiko</td></tr>
-        <tr><td>Judul Indonesia</td><td>Hai, Miiko!</td></tr>
-        <tr><td>Pengarang</td><td>Eriko Ono</td></tr>
-        <tr><td>Penerbit Jepang</td><td>Shogakukan (majalah Ciao)</td></tr>
-        <tr><td>Anime</td><td>42 episode (1998&ndash;1999)</td></tr>
-      </table>
-    </div>
-    <div class="kartu">
-      <h3>&#128240; Artikel Terbaru</h3>
-      <ul>
-        <li><a href="artikel-1.html">Mengenal Hai, Miiko!</a></li>
-        <li><a href="artikel-2.html">Penokohan Miiko Yamada</a></li>
-        <li><a href="artikel-3.html">Miiko dan Tappei</a></li>
-      </ul>
-    </div>
-    <div class="kartu">
-      <h3>&#128101; Pengunjung</h3>
-      <div class="statistik" id="pengunjung">0</div>
-      <p style="text-align:center;font-size:.8rem">kunjungan dari browser ini</p>
-    </div>
-  </aside>
+<!-- SIDEBAR AREA -->
+<aside class="sidebar">
+  <!-- Widget Jam & Tanggal -->
+  <div class="kartu">
+    <h3>&#9200; Jam</h3>
+    <div id="jam">--:--:--</div>
+    <div id="tanggal"></div>
+  </div>
+
+  <!-- Widget Info Komik -->
+  <div class="kartu">
+    <h3>&#128214; Info Komik</h3>
+    <table class="info-komik">
+      <tr><td>Judul Jepang</td><td>Kocchi Muite! Miiko</td></tr>
+      <tr><td>Judul Indonesia</td><td>Hai, Miiko!</td></tr>
+      <tr><td>Pengarang</td><td>Eriko Ono</td></tr>
+      <tr><td>Penerbit Jepang</td><td>Shogakukan (majalah Ciao)</td></tr>
+      <tr><td>Anime</td><td>42 episode (1998&ndash;1999)</td></tr>
+    </table>
+  </div>
+
+  <!-- Widget Artikel Terbaru -->
+  <div class="kartu">
+    <h3>&#128240; Artikel Terbaru</h3>
+    <ul>
+      <li><a href="artikel-1.html">Mengenal Hai, Miiko!</a></li>
+      <li><a href="artikel-2.html">Penokohan Miiko Yamada</a></li>
+      <li><a href="artikel-3.html">Team Tappei atau Team Yoshida?</a></li>
+    </ul>
+  </div>
+
+  <!-- Widget Statistik Pengunjung -->
+  <div class="kartu">
+    <h3>&#128101; Pengunjung</h3>
+    <div class="statistik" id="pengunjung">0</div>
+    <p style="text-align:center;font-size:.8rem">kunjungan dari browser ini</p>
+  </div>
+</aside>
+
 </div>
 
+<!-- ==================== FOOTER SECTION ==================== -->
 <footer class="footer">
   <div class="wadah">
-    <p>&copy; 2026 Ruang Baca Miiko. Situs review penggemar, tidak berafiliasi dengan pengarang atau penerbit. Hai, Miiko! adalah karya Eriko Ono.</p>
-    <p>Desain oleh [isi namamu] &middot; Website: <a href="https://github.com/namamu/miiko-fandom">github.com/namamu/miiko-fandom</a></p>
+    <p>&copy; 2026 All About Hai, Miiko!. Situs review penggemar, tidak berafiliasi dengan pengarang atau penerbit. Hai, Miiko! adalah karya Eriko Ono.</p>
+    <p>Desain oleh Echa Junika &middot; Website: <a href="https://github.com/namamu/miiko-fandom">github.com/namamu/miiko-fandom</a></p>
   </div>
 </footer>
 

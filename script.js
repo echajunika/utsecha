@@ -61,8 +61,11 @@ if (lightbox) {
 const JUMLAH_VOLUME = 37;
 
 // Isi review-mu di sini. Contoh format (hapus tanda // untuk memakai):
-// 1: { rating: 5, ringkasan: "Tulis ringkasan singkat dan kesanmu di sini." },
+// 1: { rating: 5, ringkasan: "Ringkasan singkat (tampil di kartu).", isi: "Review lengkapmu (tampil saat kartu diklik)." },
+// 2: { rating: 4, ringkasan: "...", isi: "..." },
 const reviewVolume = {
+  1: { rating: 5, ringkasan: "Awal yang manis dan lucu.", isi: "Tulis review lengkapmu di sini, boleh panjang." },
+  2: { rating: 4, ringkasan: "...", isi: "..." },
 };
 
 const wadahVolume = document.getElementById("gridVolume");
@@ -75,15 +78,62 @@ function tampilkanVolume(kataKunci) {
     const data = reviewVolume[i];
     const kartu = document.createElement("div");
     kartu.className = "vol" + (data ? " sudah" : "");
+    kartu.tabIndex = 0;                       // supaya bisa dipilih dengan tombol Tab
+    kartu.setAttribute("role", "button");
     const bintang = data ? "&#9733;".repeat(data.rating) + "&#9734;".repeat(5 - data.rating) : "";
     kartu.innerHTML =
       '<span class="status">' + (data ? "Sudah direview" : "Belum direview") + "</span>" +
       "<h3>Hai, Miiko! Vol. " + i + "</h3>" +
       (data ? '<div class="bintang-rating">' + bintang + "</div><p>" + data.ringkasan + "</p>"
-            : "<p>Review volume ini sedang disiapkan.</p>");
+            : "<p>Review volume ini sedang disiapkan.</p>") +
+      '<span class="klik">Klik untuk baca &raquo;</span>';
+    // klik kartu (atau tekan Enter) membuka jendela detail
+    kartu.addEventListener("click", function () { bukaDetailVolume(i); });
+    kartu.addEventListener("keydown", function (e) { if (e.key === "Enter") bukaDetailVolume(i); });
     wadahVolume.appendChild(kartu);
   }
 }
+// Jendela detail (pop-up) dibuat lewat JavaScript, tidak perlu mengubah HTML
+let jendelaVolume = null;
+function bukaDetailVolume(nomor) {
+  if (!jendelaVolume) {
+    jendelaVolume = document.createElement("div");
+    jendelaVolume.id = "jendelaVolume";
+    document.body.appendChild(jendelaVolume);
+    // klik area gelap di luar kotak = tutup
+    jendelaVolume.addEventListener("click", function (e) {
+      if (e.target === jendelaVolume) jendelaVolume.classList.remove("buka");
+    });
+  }
+  const data = reviewVolume[nomor];
+  let isi = '<div class="kotak-detail"><button class="tutup" aria-label="Tutup">&times;</button>' +
+            "<h2>Hai, Miiko! Vol. " + nomor + "</h2>";
+  if (data) {
+    isi += '<div class="bintang-rating">' + "&#9733;".repeat(data.rating) + "&#9734;".repeat(5 - data.rating) + "</div>" +
+           "<p><b>" + data.ringkasan + "</b></p>" +
+           (data.isi ? "<p>" + data.isi + "</p>" : "");
+  } else {
+    isi += "<p>Review volume ini belum ditulis. Nantikan ya!</p>";
+  }
+  // tombol volume sebelumnya / berikutnya
+  isi += '<div class="navigasi-vol">' +
+         (nomor > 1 ? '<button data-ke="' + (nomor - 1) + '">&laquo; Vol. ' + (nomor - 1) + "</button>" : "<span></span>") +
+         (nomor < JUMLAH_VOLUME ? '<button data-ke="' + (nomor + 1) + '">Vol. ' + (nomor + 1) + " &raquo;</button>" : "<span></span>") +
+         "</div></div>";
+  jendelaVolume.innerHTML = isi;
+  jendelaVolume.classList.add("buka");
+  jendelaVolume.querySelector(".tutup").addEventListener("click", function () {
+    jendelaVolume.classList.remove("buka");
+  });
+  jendelaVolume.querySelectorAll(".navigasi-vol button").forEach(function (t) {
+    t.addEventListener("click", function () { bukaDetailVolume(Number(t.dataset.ke)); });
+  });
+}
+// tombol Esc menutup jendela
+document.addEventListener("keydown", function (e) {
+  if (e.key === "Escape" && jendelaVolume) jendelaVolume.classList.remove("buka");
+});
+
 tampilkanVolume("");
 const kolomCari = document.getElementById("cariVolume");
 if (kolomCari) {

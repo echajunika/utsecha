@@ -3,35 +3,47 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Review komik Hai, Miiko! dari volume awal sampai terbaru, plus pembahasan karakter dan penokohan.">
-  <title>Home | Ruang Baca Miiko</title>
+  <meta name="description" content="Review komik Hai, Miiko! dari volume awal sampai terbaru, plus pembahasan karakter dan penokohan di All About Hai, Miiko!">
+  <title>Home | All About Hai, Miiko!</title>
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<!-- ==================== HEADER SECTION ==================== -->
 <header class="header">
-  <span class="bintang b1">&#9733;</span><span class="bintang b2">&#10084;</span>
-  <span class="bintang b3">&#9733;</span><span class="bintang b4">&#10047;</span>
+  <span class="bintang b1">&#9733;</span>
+  <span class="bintang b2">&#10084;</span>
+  <span class="bintang b3">&#9733;</span>
+  <span class="bintang b4">&#10047;</span>
   <div class="wadah">
-    <img class="logo" src="favicon.svg" alt="Logo Ruang Baca Miiko" width="84" height="84">
+    <img class="logo" src="favicon.svg" alt="Logo All About Hai, Miiko!" width="84" height="84">
     <div>
-      <h1>Ruang Baca Miiko</h1>
+      <h1>All About Hai, Miiko!</h1>
       <p>Review &amp; catatan seorang pembaca setia komik Hai, Miiko! &#9825;</p>
     </div>
   </div>
 </header>
 
-<div class="berjalan"><span>&#9733; Selamat datang di Ruang Baca Miiko! &#9733; Review volume demi volume dari awal sampai terbaru &#9733; Bahas karakter dan penokohan favorit &#9733; Yuk baca dan diskusi lewat halaman Contact &#9733;</span></div>
+<!-- ==================== RUNNING TEXT / BERJALAN ==================== -->
+<div class="berjalan">
+  <span>&#9733; 
+    Selamat datang di All About Hai, Miiko! &#9733; 
+    Review volume demi volume dari awal sampai terbaru &#9733; 
+    Bahas karakter dan penokohan favorit &#9733; 
+    Yuk baca dan diskusi lewat halaman Contact &#9733;
+  </span>
+</div>
 
+<!-- ==================== NAVIGATION BAR ==================== -->
 <nav class="nav">
   <div class="wadah">
     <button class="tombol-menu" id="tombolMenu" aria-label="Buka menu">&#9776;</button>
     <ul id="menuUtama">
-      <li><a href="index.html" class="aktif">Home</a></li>
-      <li><a href="about.html">About</a>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html" class="aktif">About</a>
         <ul class="sub">
-          <li><a href="about.html#komik">Tentang Komiknya</a></li>
+          <li><a href="about.html#komik">Tentang Komik</a></li>
           <li><a href="about.html#sejarah">Sejarah Komik</a></li>
           <li><a href="about.html#visimisi">Visi, Misi &amp; Tujuan</a></li>
           <li><a href="about.html#penulis">Tentang Penulis</a></li>
@@ -46,84 +58,107 @@
   </div>
 </nav>
 
+<!-- ==================== MAIN LAYOUT CONTAINER ==================== -->
 <div class="wadah tata">
+    
+  <!-- MAIN CONTENT AREA -->
   <main>
+    <!-- Hero Slider Section -->
     <div class="slider">
       <div class="slide s1 tampil">Selamat datang, Sahabat Miiko! &#9825;<small>Review dan catatan komik Hai, Miiko!</small></div>
       <div class="slide s2">Review volume demi volume<small>Dari volume awal sampai terbaru</small></div>
       <div class="slide s3">Bahas karakter &amp; penokohan<small>Kenali tokoh-tokoh favoritmu lebih dalam</small></div>
     </div>
+
+    <!-- Tentang Situs Ini Section -->
     <section class="kartu">
       <h2>Tentang Situs Ini</h2>
-      <p>Ruang Baca Miiko adalah tempat aku menulis review komik <i>Hai, Miiko!</i> secara berurutan dan membahas karakter serta penokohannya. Lihat halaman <a href="review.html">Review</a> untuk daftar volume dan <a href="karakter.html">Karakter</a> untuk profil tokoh.</p>
+      <p>All About Hai, Miiko! adalah tempat aku menulis review komik <i>Hai, Miiko!</i> secara berurutan dan membahas karakter serta penokohannya. Lihat halaman <a href="review.html">Review</a> untuk daftar volume dan <a href="karakter.html">Karakter</a> untuk profil tokoh.</p>
     </section>
+
+    <!-- Daftar Artikel Section -->
     <h2 style="color:var(--pink-tua);margin:6px 0 14px">&#9733; Artikel &amp; Pembahasan</h2>
+      
+    <!-- Artikel 1 -->
     <article class="kartu artikel">
       <div class="gambar" style="background:#ff8fb8">&#127872;</div>
       <div>
         <h3><a href="artikel-1.html">Mengenal Hai, Miiko!</a></h3>
-        <p class="meta">8 November 2026 &middot; oleh Admin</p>
+        <p class="meta">8 November 2026 &middot; oleh Echa Junika</p>
         <p>Pengantar untuk pembaca baru: dari mana komik ini berasal dan siapa saja yang ada di dalamnya.</p>
         <a class="baca" href="artikel-1.html">Read More &raquo;</a>
       </div>
     </article>
+
+    <!-- Artikel 2 -->
     <article class="kartu artikel">
       <div class="gambar" style="background:#8fd8c0">&#9728;</div>
       <div>
         <h3><a href="artikel-2.html">Penokohan Miiko Yamada</a></h3>
-        <p class="meta">5 November 2026 &middot; oleh Admin</p>
+        <p class="meta">5 November 2026 &middot; oleh Echa Junika</p>
         <p>Kenapa Miiko mudah disukai, dan bagaimana sifatnya menggerakkan cerita.</p>
         <a class="baca" href="artikel-2.html">Read More &raquo;</a>
       </div>
     </article>
+
+    <!-- Artikel 3 -->
     <article class="kartu artikel">
       <div class="gambar" style="background:#9d85e0">&#10084;</div>
       <div>
-        <h3><a href="artikel-3.html">Miiko dan Tappei</a></h3>
-        <p class="meta">1 November 2026 &middot; oleh Admin</p>
-        <p>Membahas dinamika Miiko dan Tappei Eguchi, pasangan yang sering berselisih tapi saling peduli.</p>
+        <h3><a href="artikel-3.html">Team Tappei atau Team Yoshida?</a></h3>
+        <p class="meta">1 November 2026 &middot; oleh Echa Junika</p>
+        <p>Membahas dinamika hubungan Miiko dengan Tappei Eguchi dan Ikuya Yoshida. Team Tappei atau Team Yoshida?</p>
         <a class="baca" href="artikel-3.html">Read More &raquo;</a>
       </div>
     </article>
-
   </main>
 
-  <aside class="sidebar">
-    <div class="kartu">
-      <h3>&#9200; Jam</h3>
-      <div id="jam">--:--:--</div>
-      <div id="tanggal"></div>
-    </div>
-    <div class="kartu">
-      <h3>&#128214; Info Komik</h3>
-      <table class="info-komik">
-        <tr><td>Judul Jepang</td><td>Kocchi Muite! Miiko</td></tr>
-        <tr><td>Judul Indonesia</td><td>Hai, Miiko!</td></tr>
-        <tr><td>Pengarang</td><td>Eriko Ono</td></tr>
-        <tr><td>Penerbit Jepang</td><td>Shogakukan (majalah Ciao)</td></tr>
-        <tr><td>Anime</td><td>42 episode (1998&ndash;1999)</td></tr>
-      </table>
-    </div>
-    <div class="kartu">
-      <h3>&#128240; Artikel Terbaru</h3>
-      <ul>
-        <li><a href="artikel-1.html">Mengenal Hai, Miiko!</a></li>
-        <li><a href="artikel-2.html">Penokohan Miiko Yamada</a></li>
-        <li><a href="artikel-3.html">Miiko dan Tappei</a></li>
-      </ul>
-    </div>
-    <div class="kartu">
-      <h3>&#128101; Pengunjung</h3>
-      <div class="statistik" id="pengunjung">0</div>
-      <p style="text-align:center;font-size:.8rem">kunjungan dari browser ini</p>
-    </div>
-  </aside>
+<!-- SIDEBAR AREA -->
+<aside class="sidebar">
+  <!-- Widget Jam & Tanggal -->
+  <div class="kartu">
+    <h3>&#9200; Jam</h3>
+    <div id="jam">--:--:--</div>
+    <div id="tanggal"></div>
+  </div>
+
+  <!-- Widget Info Komik -->
+  <div class="kartu">
+    <h3>&#128214; Info Komik</h3>
+    <table class="info-komik">
+      <tr><td>Judul Jepang</td><td>Kocchi Muite! Miiko</td></tr>
+      <tr><td>Judul Indonesia</td><td>Hai, Miiko!</td></tr>
+      <tr><td>Pengarang</td><td>Eriko Ono</td></tr>
+      <tr><td>Penerbit Jepang</td><td>Shogakukan (majalah Ciao)</td></tr>
+      <tr><td>Anime</td><td>42 episode (1998&ndash;1999)</td></tr>
+    </table>
+  </div>
+
+  <!-- Widget Artikel Terbaru -->
+  <div class="kartu">
+    <h3>&#128240; Artikel Terbaru</h3>
+    <ul>
+      <li><a href="artikel-1.html">Mengenal Hai, Miiko!</a></li>
+      <li><a href="artikel-2.html">Penokohan Miiko Yamada</a></li>
+      <li><a href="artikel-3.html">Team Tappei atau Team Yoshida?</a></li>
+    </ul>
+  </div>
+
+  <!-- Widget Statistik Pengunjung -->
+  <div class="kartu">
+    <h3>&#128101; Pengunjung</h3>
+    <div class="statistik" id="pengunjung">0</div>
+    <p style="text-align:center;font-size:.8rem">kunjungan dari browser ini</p>
+  </div>
+</aside>
+
 </div>
 
+<!-- ==================== FOOTER SECTION ==================== -->
 <footer class="footer">
   <div class="wadah">
-    <p>&copy; 2026 Ruang Baca Miiko. Situs review penggemar, tidak berafiliasi dengan pengarang atau penerbit. Hai, Miiko! adalah karya Eriko Ono.</p>
-    <p>Desain oleh [isi namamu] &middot; Website: <a href="https://github.com/namamu/miiko-fandom">github.com/namamu/miiko-fandom</a></p>
+    <p>&copy; 2026 All About Hai, Miiko!. Situs review penggemar, tidak berafiliasi dengan pengarang atau penerbit. Hai, Miiko! adalah karya Eriko Ono.</p>
+    <p>Desain oleh Echa Junika &middot; Website: <a href="https://github.com/namamu/miiko-fandom">github.com/namamu/miiko-fandom</a></p>
   </div>
 </footer>
 

@@ -3,42 +3,54 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Review komik Hai, Miiko! dari volume awal sampai terbaru, plus pembahasan karakter dan penokohan.">
-  <title>Karakter | Ruang Baca Miiko</title>
+  <meta name="description" content="Profil karakter dan penokohan lengkap dari komik Hai, Miiko! karya Eriko Ono di All About Hai, Miiko!">
+  <title>Karakter | All About Hai, Miiko!</title>
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<!-- ==================== HEADER SECTION ==================== -->
 <header class="header">
-  <span class="bintang b1">&#9733;</span><span class="bintang b2">&#10084;</span>
-  <span class="bintang b3">&#9733;</span><span class="bintang b4">&#10047;</span>
+  <span class="bintang b1">&#9733;</span>
+  <span class="bintang b2">&#10084;</span>
+  <span class="bintang b3">&#9733;</span>
+  <span class="bintang b4">&#10047;</span>
   <div class="wadah">
-    <img class="logo" src="favicon.svg" alt="Logo Ruang Baca Miiko" width="84" height="84">
+    <img class="logo" src="favicon.svg" alt="Logo All About Hai, Miiko!" width="84" height="84">
     <div>
-      <h1>Ruang Baca Miiko</h1>
+      <h1>All About Hai, Miiko!</h1>
       <p>Review &amp; catatan seorang pembaca setia komik Hai, Miiko! &#9825;</p>
     </div>
   </div>
 </header>
 
-<div class="berjalan"><span>&#9733; Selamat datang di Ruang Baca Miiko! &#9733; Review volume demi volume dari awal sampai terbaru &#9733; Bahas karakter dan penokohan favorit &#9733; Yuk baca dan diskusi lewat halaman Contact &#9733;</span></div>
+<!-- ==================== RUNNING TEXT / BERJALAN ==================== -->
+<div class="berjalan">
+  <span>&#9733; 
+    Selamat datang di All About Hai, Miiko! &#9733; 
+    Review volume demi volume dari awal sampai terbaru &#9733; 
+    Bahas karakter dan penokohan favorit &#9733; 
+    Yuk baca dan diskusi lewat halaman Contact &#9733;
+  </span>
+</div>
 
+<!-- ==================== NAVIGATION BAR ==================== -->
 <nav class="nav">
   <div class="wadah">
     <button class="tombol-menu" id="tombolMenu" aria-label="Buka menu">&#9776;</button>
     <ul id="menuUtama">
       <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a>
+      <li><a href="about.html" class="aktif">About</a>
         <ul class="sub">
-          <li><a href="about.html#komik">Tentang Komiknya</a></li>
+          <li><a href="about.html#komik">Tentang Komik</a></li>
           <li><a href="about.html#sejarah">Sejarah Komik</a></li>
           <li><a href="about.html#visimisi">Visi, Misi &amp; Tujuan</a></li>
           <li><a href="about.html#penulis">Tentang Penulis</a></li>
         </ul>
       </li>
       <li><a href="review.html">Review</a></li>
-      <li><a href="karakter.html" class="aktif">Karakter</a></li>
+      <li><a href="karakter.html">Karakter</a></li>
       <li><a href="gallery.html">Gallery</a></li>
       <li><a href="registration.html">Registration</a></li>
       <li><a href="contact.html">Contact</a></li>
@@ -46,11 +58,17 @@
   </div>
 </nav>
 
+<!-- ==================== MAIN LAYOUT CONTAINER ==================== -->
 <div class="wadah tata">
+    
+  <!-- MAIN CONTENT AREA -->
   <main>
+    <!-- Karakter & Penokohan Section -->
     <section class="kartu">
       <h2>Karakter &amp; Penokohan</h2>
       <p>Profil dasar tiap tokoh. Kolom &ldquo;Catatanku&rdquo; adalah tempat kamu menulis penilaian pribadi.</p><br>
+        
+      <!-- Tab Filter Kelompok Karakter -->
       <div class="tab">
         <button class="aktif" data-kelompok="semua">Semua</button>
         <button data-kelompok="utama">Tokoh Utama</button>
@@ -58,126 +76,151 @@
         <button data-kelompok="keluarga">Keluarga</button>
         <button data-kelompok="guru">Guru</button>
       </div>
+
+      <!-- Grid Daftar Karakter -->
       <div class="grid-karakter">
-      <div class="karakter" data-kelompok="utama">
-        <div class="avatar" style="background:#ff8fb8">&#9728;</div>
-        <h3>Miiko Yamada</h3>
-        <p>Tokoh utama. Ceria, aktif, peduli pada teman, tetapi polos soal perasaan orang lain.</p>
-        <div class="catatan">Catatanku: [tulis penilaianmu tentang karakter ini]</div>
+        <div class="karakter" data-kelompok="utama">
+          <div class="avatar" style="background:#ff8fb8">&#9728;</div>
+          <h3>Miiko Yamada</h3>
+          <p>Tokoh utama. Ceria, aktif, peduli pada teman, tetapi polos soal perasaan orang lain.</p>
+          <div class="catatan">Catatanku: [tulis penilaianmu tentang karakter ini]</div>
+        </div>
+          
+        <div class="karakter" data-kelompok="utama">
+          <div class="avatar" style="background:#6fc3ff">&#9917;</div>
+          <h3>Tappei Eguchi</h3>
+          <p>Tinggi dan atletis, agak kasar, tetapi peduli. Sering menggoda Miiko dan selalu hadir saat ia kesulitan.</p>
+          <div class="catatan">Catatanku: [tulis penilaianmu tentang karakter ini]</div>
+        </div>
+          
+        <div class="karakter" data-kelompok="teman">
+          <div class="avatar" style="background:#e58fd6">&#9998;</div>
+          <h3>Mari Shimura</h3>
+          <p>Sahabat Miiko. Keras kepala, blak-blakan, dan setia. Bercita-cita menjadi komikus.</p>
+          <div class="catatan">Catatanku: [tulis penilaianmu tentang karakter ini]</div>
+        </div>
+          
+        <div class="karakter" data-kelompok="teman">
+          <div class="avatar" style="background:#8fd8c0">&#127850;</div>
+          <h3>Yuuko Ogawa (Yukko)</h3>
+          <p>Dewasa, baik, dan sabar. Sering menengahi Miiko dan Mari, pandai memasak dan membuat kerajinan.</p>
+          <div class="catatan">Catatanku: [tulis penilaianmu tentang karakter ini]</div>
+        </div>
+          
+        <div class="karakter" data-kelompok="teman">
+          <div class="avatar" style="background:#ffb86b">&#127838;</div>
+          <h3>Kenta Sato</h3>
+          <p>Lucu dan baik hati, kadang usil. Pacar Yukko dan bercita-cita membuka toko roti bersamanya.</p>
+          <div class="catatan">Catatanku: [tulis penilaianmu tentang karakter ini]</div>
+        </div>
+          
+        <div class="karakter" data-kelompok="teman">
+          <div class="avatar" style="background:#9d85e0">&#9733;</div>
+          <h3>Ikuya Yoshida</h3>
+          <p>Murid teladan yang tenang dan pintar. Menyukai Miiko dan menganggap Tappei sebagai saingan.</p>
+          <div class="catatan">Catatanku: [tulis penilaianmu tentang karakter ini]</div>
+        </div>
+          
+        <div class="karakter" data-kelompok="teman">
+          <div class="avatar" style="background:#ff7a7a">&#10047;</div>
+          <h3>Miho Tanimura</h3>
+          <p>Gadis paling cantik di kelas. Menyukai Tappei.</p>
+          <div class="catatan">Catatanku: [tulis penilaianmu tentang karakter ini]</div>
+        </div>
+          
+        <div class="karakter" data-kelompok="teman">
+          <div class="avatar" style="background:#b0d96b">&#9729;</div>
+          <h3>Yoshiki Nomura</h3>
+          <p>Anak pendiam dan nyentrik, tetapi punya sisi yang masuk akal.</p>
+          <div class="catatan">Catatanku: [tulis penilaianmu tentang karakter ini]</div>
+        </div>
+          
+        <div class="karakter" data-kelompok="keluarga">
+          <div class="avatar" style="background:#6fc3ff">&#128214;</div>
+          <h3>Mamoru Yamada</h3>
+          <p>Adik Miiko yang rajin dan sering membantu kakaknya mengerjakan PR.</p>
+          <div class="catatan">Catatanku: [tulis penilaianmu tentang karakter ini]</div>
+        </div>
+          
+        <div class="karakter" data-kelompok="keluarga">
+          <div class="avatar" style="background:#ff8fb8">&#127880;</div>
+          <h3>Momo Yamada</h3>
+          <p>Adik bungsu Miiko dan Mamoru.</p>
+          <div class="catatan">Catatanku: [tulis penilaianmu tentang karakter ini]</div>
+        </div>
+          
+        <div class="karakter" data-kelompok="keluarga">
+          <div class="avatar" style="background:#8fd8c0">&#9749;</div>
+          <h3>Rie Yamada</h3>
+          <p>Ibu Miiko, seorang editor majalah.</p>
+          <div class="catatan">Catatanku: [tulis penilaianmu tentang karakter ini]</div>
+        </div>
+          
+        <div class="karakter" data-kelompok="keluarga">
+          <div class="avatar" style="background:#9d85e0">&#128240;</div>
+          <h3>Kosuke Yamada</h3>
+          <p>Ayah Miiko, seorang wartawan koran.</p>
+          <div class="catatan">Catatanku: [tulis penilaianmu tentang karakter ini]</div>
+        </div>
+          
+        <div class="karakter" data-kelompok="guru">
+          <div class="avatar" style="background:#ffb86b">&#127979;</div>
+          <h3>Akio Onishi</h3>
+          <p>Wali kelas Miiko dari kelas 4 sampai kelas 6.</p>
+          <div class="catatan">Catatanku: [tulis penilaianmu tentang karakter ini]</div>
+        </div>
       </div>
-      <div class="karakter" data-kelompok="utama">
-        <div class="avatar" style="background:#6fc3ff">&#9917;</div>
-        <h3>Tappei Eguchi</h3>
-        <p>Tinggi dan atletis, agak kasar, tetapi peduli. Sering menggoda Miiko dan selalu hadir saat ia kesulitan.</p>
-        <div class="catatan">Catatanku: [tulis penilaianmu tentang karakter ini]</div>
-      </div>
-      <div class="karakter" data-kelompok="teman">
-        <div class="avatar" style="background:#e58fd6">&#9998;</div>
-        <h3>Mari Shimura</h3>
-        <p>Sahabat Miiko. Keras kepala, blak-blakan, dan setia. Bercita-cita menjadi komikus.</p>
-        <div class="catatan">Catatanku: [tulis penilaianmu tentang karakter ini]</div>
-      </div>
-      <div class="karakter" data-kelompok="teman">
-        <div class="avatar" style="background:#8fd8c0">&#127850;</div>
-        <h3>Yuuko Ogawa (Yukko)</h3>
-        <p>Dewasa, baik, dan sabar. Sering menengahi Miiko dan Mari, pandai memasak dan membuat kerajinan.</p>
-        <div class="catatan">Catatanku: [tulis penilaianmu tentang karakter ini]</div>
-      </div>
-      <div class="karakter" data-kelompok="teman">
-        <div class="avatar" style="background:#ffb86b">&#127838;</div>
-        <h3>Kenta Sato</h3>
-        <p>Lucu dan baik hati, kadang usil. Pacar Yukko dan bercita-cita membuka toko roti bersamanya.</p>
-        <div class="catatan">Catatanku: [tulis penilaianmu tentang karakter ini]</div>
-      </div>
-      <div class="karakter" data-kelompok="teman">
-        <div class="avatar" style="background:#9d85e0">&#9733;</div>
-        <h3>Ikuya Yoshida</h3>
-        <p>Murid teladan yang tenang dan pintar. Menyukai Miiko dan menganggap Tappei sebagai saingan.</p>
-        <div class="catatan">Catatanku: [tulis penilaianmu tentang karakter ini]</div>
-      </div>
-      <div class="karakter" data-kelompok="teman">
-        <div class="avatar" style="background:#ff7a7a">&#10047;</div>
-        <h3>Miho Tanimura</h3>
-        <p>Gadis paling cantik di kelas. Menyukai Tappei.</p>
-        <div class="catatan">Catatanku: [tulis penilaianmu tentang karakter ini]</div>
-      </div>
-      <div class="karakter" data-kelompok="teman">
-        <div class="avatar" style="background:#b0d96b">&#9729;</div>
-        <h3>Yoshiki Nomura</h3>
-        <p>Anak pendiam dan nyentrik, tetapi punya sisi yang masuk akal.</p>
-        <div class="catatan">Catatanku: [tulis penilaianmu tentang karakter ini]</div>
-      </div>
-      <div class="karakter" data-kelompok="keluarga">
-        <div class="avatar" style="background:#6fc3ff">&#128214;</div>
-        <h3>Mamoru Yamada</h3>
-        <p>Adik Miiko yang rajin dan sering membantu kakaknya mengerjakan PR.</p>
-        <div class="catatan">Catatanku: [tulis penilaianmu tentang karakter ini]</div>
-      </div>
-      <div class="karakter" data-kelompok="keluarga">
-        <div class="avatar" style="background:#ff8fb8">&#127880;</div>
-        <h3>Momo Yamada</h3>
-        <p>Adik bungsu Miiko dan Mamoru.</p>
-        <div class="catatan">Catatanku: [tulis penilaianmu tentang karakter ini]</div>
-      </div>
-      <div class="karakter" data-kelompok="keluarga">
-        <div class="avatar" style="background:#8fd8c0">&#9749;</div>
-        <h3>Rie Yamada</h3>
-        <p>Ibu Miiko, seorang editor majalah.</p>
-        <div class="catatan">Catatanku: [tulis penilaianmu tentang karakter ini]</div>
-      </div>
-      <div class="karakter" data-kelompok="keluarga">
-        <div class="avatar" style="background:#9d85e0">&#128240;</div>
-        <h3>Kosuke Yamada</h3>
-        <p>Ayah Miiko, seorang wartawan koran.</p>
-        <div class="catatan">Catatanku: [tulis penilaianmu tentang karakter ini]</div>
-      </div>
-      <div class="karakter" data-kelompok="guru">
-        <div class="avatar" style="background:#ffb86b">&#127979;</div>
-        <h3>Akio Onishi</h3>
-        <p>Wali kelas Miiko dari kelas 4 sampai kelas 6.</p>
-        <div class="catatan">Catatanku: [tulis penilaianmu tentang karakter ini]</div>
-      </div>
-      </div>
+
       <p style="margin-top:12px;font-size:.85rem">Sumber data tokoh: <a href="https://en.wikipedia.org/wiki/Kocchi_Muite!_Miiko">Wikipedia</a> dan <a href="https://www.gramedia.com/best-seller/sinopsis-komik-hai-miiko">Gramedia</a>.</p>
     </section>
   </main>
 
-  <aside class="sidebar">
-    <div class="kartu">
-      <h3>&#9200; Jam</h3>
-      <div id="jam">--:--:--</div>
-      <div id="tanggal"></div>
-    </div>
-    <div class="kartu">
-      <h3>&#128214; Info Komik</h3>
-      <table class="info-komik">
-        <tr><td>Judul Jepang</td><td>Kocchi Muite! Miiko</td></tr>
-        <tr><td>Judul Indonesia</td><td>Hai, Miiko!</td></tr>
-        <tr><td>Pengarang</td><td>Eriko Ono</td></tr>
-        <tr><td>Penerbit Jepang</td><td>Shogakukan (majalah Ciao)</td></tr>
-        <tr><td>Anime</td><td>42 episode (1998&ndash;1999)</td></tr>
-      </table>
-    </div>
-    <div class="kartu">
-      <h3>&#128240; Artikel Terbaru</h3>
-      <ul>
-        <li><a href="artikel-1.html">Mengenal Hai, Miiko!</a></li>
-        <li><a href="artikel-2.html">Penokohan Miiko Yamada</a></li>
-        <li><a href="artikel-3.html">Miiko dan Tappei</a></li>
-      </ul>
-    </div>
-    <div class="kartu">
-      <h3>&#128101; Pengunjung</h3>
-      <div class="statistik" id="pengunjung">0</div>
-      <p style="text-align:center;font-size:.8rem">kunjungan dari browser ini</p>
-    </div>
-  </aside>
+<!-- SIDEBAR AREA -->
+<aside class="sidebar">
+  <!-- Widget Jam & Tanggal -->
+  <div class="kartu">
+    <h3>&#9200; Jam</h3>
+    <div id="jam">--:--:--</div>
+    <div id="tanggal"></div>
+  </div>
+
+  <!-- Widget Info Komik -->
+  <div class="kartu">
+    <h3>&#128214; Info Komik</h3>
+    <table class="info-komik">
+      <tr><td>Judul Jepang</td><td>Kocchi Muite! Miiko</td></tr>
+      <tr><td>Judul Indonesia</td><td>Hai, Miiko!</td></tr>
+      <tr><td>Pengarang</td><td>Eriko Ono</td></tr>
+      <tr><td>Penerbit Jepang</td><td>Shogakukan (majalah Ciao)</td></tr>
+      <tr><td>Anime</td><td>42 episode (1998&ndash;1999)</td></tr>
+    </table>
+  </div>
+
+  <!-- Widget Artikel Terbaru -->
+  <div class="kartu">
+    <h3>&#128240; Artikel Terbaru</h3>
+    <ul>
+      <li><a href="artikel-1.html">Mengenal Hai, Miiko!</a></li>
+      <li><a href="artikel-2.html">Penokohan Miiko Yamada</a></li>
+      <li><a href="artikel-3.html">Team Tappei atau Team Yoshida?</a></li>
+    </ul>
+  </div>
+
+  <!-- Widget Statistik Pengunjung -->
+  <div class="kartu">
+    <h3>&#128101; Pengunjung</h3>
+    <div class="statistik" id="pengunjung">0</div>
+    <p style="text-align:center;font-size:.8rem">kunjungan dari browser ini</p>
+  </div>
+</aside>
+
 </div>
 
+<!-- ==================== FOOTER SECTION ==================== -->
 <footer class="footer">
   <div class="wadah">
-    <p>&copy; 2026 Ruang Baca Miiko. Situs review penggemar, tidak berafiliasi dengan pengarang atau penerbit. Hai, Miiko! adalah karya Eriko Ono.</p>
-    <p>Desain oleh [isi namamu] &middot; Website: <a href="https://github.com/namamu/miiko-fandom">github.com/namamu/miiko-fandom</a></p>
+    <p>&copy; 2026 All About Hai, Miiko!. Situs review penggemar, tidak berafiliasi dengan pengarang atau penerbit. Hai, Miiko! adalah karya Eriko Ono.</p>
+    <p>Desain oleh Echa Junika &middot; Website: <a href="https://github.com/namamu/miiko-fandom">github.com/namamu/miiko-fandom</a></p>
   </div>
 </footer>
 
