@@ -58,7 +58,7 @@ if (lightbox) {
 
 // ===== 5b. Daftar review volume (halaman Review) =====
 // Ubah angka ini sesuai volume terbaru yang kamu punya.
-const JUMLAH_VOLUME = 37;
+const JUMLAH_VOLUME = 41;
 
 // Isi review-mu di sini. Contoh format (hapus tanda // untuk memakai):
 // 1: { rating: 5, ringkasan: "Ringkasan singkat (tampil di kartu).", isi: "Review lengkapmu (tampil saat kartu diklik)." },
@@ -101,8 +101,9 @@ const reviewVolume = {
   33: { rating: "...", ringkasan: "...", isi: "..." },
   34: { rating: "...", ringkasan: "...", isi: "..." },
   35: { rating: "...", ringkasan: "...", isi: "..." },
-  36: { rating: "...", ringkasan: "...", isi: "..." },
-  37: { rating: "...", ringkasan: "...", isi: "..." },
+  36: { rating: "4", ringkasan: "...", isi: "..." },
+  37: { rating: "5", ringkasan: "...", isi: "..." },
+  38: { rating: "5", ringkasan: "...", isi: "..." },
 };
 
 const wadahVolume = document.getElementById("gridVolume");
@@ -190,11 +191,11 @@ tombolTab.forEach(function (tombol) {
   });
 });
 
-// ===== 6. Validasi form (Registrasi & Kontak) =====
+// ===== 6. Validasi dan kirim form (Registrasi & Kontak) lewat Formspree =====
 function pasangForm(idForm, idPesan, teksSukses) {
   const form = document.getElementById(idForm);
   if (!form) return;
-  form.addEventListener("submit", function (e) {
+  form.addEventListener("submit", async function (e) {
     e.preventDefault();
     const pesan = document.getElementById(idPesan);
     const email = form.querySelector('input[type="email"]').value;
@@ -204,10 +205,21 @@ function pasangForm(idForm, idPesan, teksSukses) {
       pesan.textContent = "Format email belum benar, coba cek lagi ya.";
       return;
     }
-    pesan.className = "pesan ok";
-    pesan.textContent = teksSukses;
-    form.reset();
+    try {
+      const respon = await fetch(form.action, {
+        method: "POST",
+        body: new FormData(form),
+        headers: { Accept: "application/json" }
+      });
+      if (!respon.ok) throw new Error("gagal");
+      pesan.className = "pesan ok";
+      pesan.textContent = teksSukses;
+      form.reset();
+    } catch (err) {
+      pesan.className = "pesan salah";
+      pesan.textContent = "Maaf, pesan belum terkirim. Coba lagi nanti ya.";
+    }
   });
 }
-pasangForm("formRegistrasi", "pesanRegistrasi", "Terima kasih! Pendaftaranmu sudah kami terima (simulasi, belum terkirim ke server).");
-pasangForm("formKontak", "pesanKontak", "Pesanmu sudah dicatat. Terima kasih sudah menghubungi kami (simulasi).");
+pasangForm("formRegistrasi", "pesanRegistrasi", "Terima kasih! Pendaftaranmu sudah kami terima.");
+pasangForm("formKontak", "pesanKontak", "Pesanmu sudah terkirim. Terima kasih sudah menghubungi kami!");

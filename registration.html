@@ -17,7 +17,7 @@
   <span class="bintang b3">&#9733;</span>
   <span class="bintang b4">&#10047;</span>
   <div class="wadah">
-    <img class="logo" src="favicon.svg" alt="Logo All About Hai, Miiko!" width="84" height="84">
+    <img class="logo" src="images/miiko.svg" alt="Logo All About Hai, Miiko!" width="100" height="100">
     <div>
       <h1>All About Hai, Miiko!</h1>
       <p>Review &amp; catatan seorang pembaca setia komik Hai, Miiko! &#9825;</p>
@@ -65,46 +65,32 @@
   <main>
     <!-- Formulir Pendaftaran Klub Penggemar -->
     <section class="kartu">
-      <h2>&#10084; Pendaftaran Warga Kehormatan Desa Yamada!</h2>
+      <h2>&#10084; Pendaftaran Miiko Lovers!</h2>
       <p>Mau jadi bagian dari lingkaran terdekat para pembaca setia Miiko? Yuk, isi formulir di bawah ini untuk resmi bergabung ke <b>Klub Pembaca Setia Hai, Miiko!</b> Dapatkan update kilat setiap kali review volume terbaru rilis, plus pamerkan kubu favoritmu di sini! &#9733;</p><br>
         
-      <form id="formRegistrasi">
-        <label for="nama">Nama Lengkap (atau Nama Panggilan Fandom)</label>
-        <input type="text" id="nama" placeholder="Contoh: Echa Miiko Lover" required>
-          
-        <label for="panggilan">Panggilan Akrab di Klub</label>
-        <input type="text" id="panggilan" placeholder="Contoh: Echa" required>
-          
-        <label for="email">Alamat Email (untuk kiriman surat cinta &amp; info review)</label>
-        <input type="email" id="email" placeholder="echa.junika@contoh.com" required>
-          
-        <label for="volume">Volume <i>Hai, Miiko!</i> terakhir yang sudah kamu tamatkan</label>
-        <input type="number" id="volume" min="1" max="60" placeholder="Misal: 36" required>
-          
-        <label for="karakter">Karakter Paling Jagoan / Favorit Kamu</label>
-        <select id="karakter" required>
-          <option value="">-- Pilih Karakter Favoritmu --</option>
-          <option>Miiko Yamada (Si Ceria &amp; Heboh)</option>
-          <option>Tappei Eguchi (Si Jahil yang Perhatian)</option>
-          <option>Mari Shimura (Sahabat Setia &amp; Calon Komikus)</option>
-          <option>Yukko Ogawa (Si Manis &amp; Sabar)</option>
-          <option>Ikuya Yoshida (Murid Teladan &amp; Tenang)</option>
-          <option>Mamoru Yamada (Adik Pintar &amp; Rapi)</option>
-          <option>Lainnya (Tulis di alasan ya!)</option>
+      <form id="formRegistrasi" action="https://formspree.io/f/mnpdpqdr" method="POST">
+        <input type="hidden" name="jenis_formulir" value="Pendaftaran">
+        <label for="nama">Nama lengkap</label>
+        <input type="text" id="nama" name="nama" required>
+        <label for="panggilan">Nama panggilan</label>
+        <input type="text" id="panggilan" name="panggilan" required>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+        <label for="volume">Volume terakhir yang kamu baca</label>
+        <input type="number" id="volume" name="volume" min="1" max="60" required>
+        <label for="karakter">Karakter favorit</label>
+        <select id="karakter" name="karakter">
+          <option>Pilih karakter</option>
+          <option>Miiko Yamada</option>
+          <option>Tappei Eguchi</option>
+          <option>Mari Shimura</option>
+          <option>Yukko Ogawa</option>
+          <option>Ikuya Yoshida</option>
+          <option>Lainnya</option>
         </select>
-
-        <label for=" kubu">Pilih Kubu Kamu Sekarang!</label>
-        <select id="kubu">
-          <option value="">-- Team Tappei atau Team Yoshida? --</option>
-          <option>Team Tappei (Suka dinamika usil tapi setia)</option>
-          <option>Team Yoshida (Suka ketenangan &amp; perhatian lembut)</option>
-          <option>Team Netral / Bahagia untuk Siapa Saja!</option>
-        </select>
-          
-        <label for="alasan">Ceritakan dong, apa hal paling berkesan dari komik Hai, Miiko! buat kamu?</label>
-        <textarea id="alasan" rows="4" placeholder="Tuliskan dengan penuh semangat di sini..."></textarea>
-          
-        <button type="submit">&#10084; Daftar Jadi Anggota Resmi!</button>
+        <label for="alasan">Apa yang paling kamu suka dari komik ini?</label>
+        <textarea id="alasan" name="alasan" rows="4"></textarea>
+        <button type="submit">Daftar Sekarang</button>
       </form>
         
       <div class="pesan" id="pesanRegistrasi"></div>
@@ -123,6 +109,7 @@
   <!-- Widget Info Komik -->
   <div class="kartu">
     <h3>&#128214; Info Komik</h3>
+    <img class="gambar-tengah" src="images/volume36.jpeg" alt="Sampul volume favorit" width="250" height="280" loading="lazy">
     <table class="info-komik">
       <tr><td>Judul Jepang</td><td>Kocchi Muite! Miiko</td></tr>
       <tr><td>Judul Indonesia</td><td>Hai, Miiko!</td></tr>
@@ -156,7 +143,7 @@
 <footer class="footer">
   <div class="wadah">
     <p>&copy; 2026 All About Hai, Miiko!. Situs review penggemar, tidak berafiliasi dengan pengarang atau penerbit. Hai, Miiko! adalah karya Eriko Ono.</p>
-    <p>Desain oleh Echa Junika &middot; Website: <a href="https://github.com/namamu/miiko-fandom">github.com/namamu/miiko-fandom</a></p>
+    <p>Desain oleh Echa Junika &middot; Website: <a href="https://github.com/echajunika">github.com/echajunika</a></p>
   </div>
 </footer>
 
